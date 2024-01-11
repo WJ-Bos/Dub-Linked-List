@@ -7,6 +7,38 @@ public class DubLinkedList {
         this.tail = null;
     }
 
+
+    public String removeTail(){
+        Node removedTail = this.tail;
+
+        if(removedTail == null){
+            return null;
+        }this.tail = removedTail.getPreviousNode();
+
+        if (this.tail != null){
+            this.tail.setNextNode(null);
+        }
+        if (removedTail == this.head){
+            this.removeHead();
+        }
+        return removedTail.data;
+    }
+
+    public String removeHead(){
+        Node removedHead = this.head;
+        if(removedHead == null){
+            return null;
+        }this.head = removedHead.getNextNode();
+
+        if(this.head != null){
+            this.head.setPreviousNode(null);
+        }
+        if(removedHead == this.tail){
+            this.removeTail();
+        }
+        return removedHead.data;
+
+    }
     public void addToHead(String data){
     Node newHead = new Node(data);
     Node currentHead = this.head;
@@ -51,6 +83,8 @@ public class DubLinkedList {
         busStops.addToHead("Denver");
         busStops.addToTail("LA");
         busStops.printList();
+        busStops.removeHead();
+
 
     }
 }
