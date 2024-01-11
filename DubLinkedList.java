@@ -8,7 +8,15 @@ public class DubLinkedList {
     }
 
     public void addToHead(String data){
+    Node newHead = new Node(data);
+    Node currentHead = this.head;
 
+    if(currentHead != null){
+        currentHead.setPreviousNode(newHead);
+        newHead.setNextNode(currentHead);
+    } this.head = newHead;
+
+    if(this.tail == null) this.tail = newHead;
     }
 
     public String printList() {
