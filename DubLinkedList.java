@@ -7,7 +7,6 @@ public class DubLinkedList {
         this.tail = null;
     }
 
-
     public String removeTail(){
         Node removedTail = this.tail;
 
