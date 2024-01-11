@@ -7,7 +7,6 @@ public class DubLinkedList {
         this.tail = null;
     }
 
-
     public String removeTail(){
         Node removedTail = this.tail;
 
@@ -51,6 +50,7 @@ public class DubLinkedList {
     if(this.tail == null) this.tail = newHead;
     }
 
+
     public void addToTail(String data){
         Node newTail = new Node(data);
         Node currentTail = this.tail;
@@ -63,7 +63,6 @@ public class DubLinkedList {
             this.head = newTail;
         }
     }
-
 
     public String printList() {
         Node currentNode = this.head;
@@ -84,6 +83,9 @@ public class DubLinkedList {
         busStops.addToTail("LA");
         busStops.printList();
         busStops.removeHead();
+        busStops.addToHead("Colorado");
+        busStops.addToHead("New York");
+        busStops.addToHead("University");
 
 
     }
