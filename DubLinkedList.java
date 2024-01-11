@@ -83,6 +83,8 @@ public class DubLinkedList {
         busStops.addToHead("Denver");
         busStops.addToTail("LA");
         busStops.printList();
+        busStops.removeHead();
+
 
     }
 }
