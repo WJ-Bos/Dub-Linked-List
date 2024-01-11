@@ -19,6 +19,20 @@ public class DubLinkedList {
     if(this.tail == null) this.tail = newHead;
     }
 
+    public void addToTail(String data){
+        Node newTail = new Node(data);
+        Node currentTail = this.tail;
+
+        if(currentTail != null){
+            currentTail.setNextNode(newTail);
+            newTail.setPreviousNode(currentTail);
+        }this.tail = newTail;
+        if (this.head == null){
+            this.head = newTail;
+        }
+    }
+
+
     public String printList() {
         Node currentNode = this.head;
         String output = "<head> ";
@@ -32,6 +46,11 @@ public class DubLinkedList {
     }
 
     public static void main(String[] args) {
+        DubLinkedList busStops = new DubLinkedList();
+        busStops.addToHead("Chicago");
+        busStops.addToHead("Denver");
+        busStops.addToTail("LA");
+        busStops.printList();
 
     }
 }
