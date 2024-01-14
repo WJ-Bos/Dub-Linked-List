@@ -20,6 +20,18 @@ public class DubLinkedList {
             currentNode = currentNode.getNextNode();
         }
         if(nodeToRemove == null)return null;
+
+        if(nodeToRemove == this.head){
+            removeHead();
+        } else if (nodeToRemove == this.tail) {
+            removeTail();
+        }else{
+            Node nextNode = nodeToRemove.getNextNode();
+            Node previousNode = nodeToRemove.getPreviousNode();
+
+            nextNode.setPreviousNode(previousNode);
+            previousNode.setNextNode(nextNode);
+        }
         return nodeToRemove;
     }
 
@@ -103,6 +115,7 @@ public class DubLinkedList {
         busStops.addToHead("New York");
         busStops.addToHead("University");
 
+        busStops.removeByData("New York");
 
     }
 }
