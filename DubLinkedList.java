@@ -105,17 +105,19 @@ public class DubLinkedList {
     }
 
     public static void main(String[] args) {
-        DubLinkedList busStops = new DubLinkedList();
-        busStops.addToHead("Chicago");
-        busStops.addToHead("Denver");
-        busStops.addToTail("LA");
-        busStops.printList();
-        busStops.removeHead();
-        busStops.addToHead("Colorado");
-        busStops.addToHead("New York");
-        busStops.addToHead("University");
-
-        busStops.removeByData("New York");
-
+        DubLinkedList subway = new DubLinkedList();
+        subway.addToHead("Times Square");
+        subway.addToHead("Grand Central");
+        subway.addToHead("Central Park");
+        subway.printList();
+        subway.addToTail("Penn Station");
+        subway.addToTail("Wall Street");
+        subway.addToTail("Brooklyn Bridge");
+        subway.printList();
+        subway.removeHead();
+        subway.removeTail();
+        subway.printList();
+        subway.removeByData("Times Square");
+        subway.printList();
     }
 }
