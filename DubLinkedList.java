@@ -7,6 +7,22 @@ public class DubLinkedList {
         this.tail = null;
     }
 
+
+    public Node removeByData(String data){
+        Node nodeToRemove = null;
+        Node currentNode = this.head;
+
+        while(currentNode != null){
+            if(currentNode.data == data){
+                 nodeToRemove = currentNode;
+                 break;
+            }
+            currentNode = currentNode.getNextNode();
+        }
+        if(nodeToRemove == null)return null;
+        return nodeToRemove;
+    }
+
     public String removeTail(){
         Node removedTail = this.tail;
 
