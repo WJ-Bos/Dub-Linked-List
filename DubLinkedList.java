@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class DubLinkedList {
     public Node head;
     public Node tail;
