@@ -114,6 +114,9 @@ public class DubLinkedList {
         subway.printList();
         subway.addToTail("Penn Station");
         subway.addToTail("Wall Street");
+        subway.addToTail("Johannesburg Street");
+        subway.addToTail("Brick Street");
+        subway.addToTail("Tren Street");
         subway.addToTail("Brooklyn Bridge");
         subway.printList();
         subway.removeHead();
