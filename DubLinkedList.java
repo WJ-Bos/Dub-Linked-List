@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.Objects;
 
 public class DubLinkedList {
     public Node head;
@@ -15,7 +16,7 @@ public class DubLinkedList {
         Node currentNode = this.head;
 
         while(currentNode != null){
-            if(currentNode.data == data){
+            if(Objects.equals(currentNode.data, data)){
                  nodeToRemove = currentNode;
                  break;
             }
